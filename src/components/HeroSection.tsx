@@ -134,10 +134,13 @@ export const HeroSection: React.FC = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#contact"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Aryan_Khubalkar_Resume.pdf"
             className="px-8 py-4 rounded-full border border-[#5ed29c]/60 text-white font-bold text-sm tracking-wider uppercase flex items-center gap-3 hover:bg-[#5ed29c]/15 transition-all cursor-pointer"
           >
-            <Download className="w-4 h-4 text-[#5ed29c]" /> Contact Me
+            <Download className="w-4 h-4 text-[#5ed29c]" /> Download Resume
           </motion.a>
         </motion.div>
 
