@@ -137,8 +137,12 @@ export const AboutSection: React.FC = () => {
             <div className="flex items-center gap-2 text-[#5ed29c] font-mono-accent font-bold text-xs uppercase mb-3">
               <Globe className="w-4 h-4" /> Languages
             </div>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2.5 text-sm">
               <div className="flex justify-between items-center text-gray-200">
+                <span className="font-semibold text-white">Marathi</span>
+                <span className="text-xs text-[#5ed29c] font-mono-accent">Native / Mother Tongue</span>
+              </div>
+              <div className="flex justify-between items-center text-gray-200 pt-2 border-t border-[#1E2522]">
                 <span className="font-semibold text-white">English</span>
                 <span className="text-xs text-[#5ed29c] font-mono-accent">Professional Working</span>
               </div>
