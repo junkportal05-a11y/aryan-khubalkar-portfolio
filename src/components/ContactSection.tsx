@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle2, User, AtSign, MessageSquare } from 'lucide-react';
-import { LinkedinIcon } from './Icons';
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -18,10 +16,10 @@ export const ContactSection: React.FC = () => {
     }, 4000);
   };
 
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
   return (
-    <section id="contact" className="py-24 px-6 max-w-5xl mx-auto z-10 relative">
-      
-      {/* Section Subtext & Title */}
+    <section id="contact" className="py-24 px-6 max-w-[680px] mx-auto z-10 relative">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
           LET'S <span className="font-serif-italic font-normal text-5xl sm:text-6xl text-[#5ed29c]">Connect</span><span className="text-[#5ed29c]">.</span>
@@ -31,12 +29,11 @@ export const ContactSection: React.FC = () => {
         </p>
       </div>
 
-      {/* Centered Liquid Glass Card */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="liquid-glass-card rounded-3xl p-8 sm:p-12 border border-[#5ed29c]/30 shadow-2xl relative overflow-hidden"
+        className="liquid-glass-card rounded-3xl p-8 sm:p-12 border border-white/[0.08] shadow-2xl relative overflow-hidden"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
@@ -84,7 +81,7 @@ export const ContactSection: React.FC = () => {
                 className="flex items-center gap-4 p-4 rounded-xl bg-[#111614] border border-[#5ed29c]/25 hover:border-[#5ed29c] transition-all group"
               >
                 <div className="p-3 rounded-lg bg-[#5ed29c]/10 text-[#5ed29c]">
-                  <LinkedinIcon className="w-5 h-5" />
+                  <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="text-xs text-gray-400 font-mono-accent block">LinkedIn</span>
@@ -118,7 +115,7 @@ export const ContactSection: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12 bg-[#070B0A] rounded-2xl border border-[#5ed29c]/30 p-6"
+                className="text-center py-12 bg-[#070B0A] rounded-2xl border border-white/[0.08] p-6"
               >
                 <div className="w-16 h-16 rounded-full bg-[#5ed29c]/20 text-[#5ed29c] flex items-center justify-center mx-auto mb-4 border border-[#5ed29c]/40">
                   <CheckCircle2 className="w-8 h-8" />
@@ -132,7 +129,7 @@ export const ContactSection: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-xs uppercase font-mono-accent tracking-wider text-gray-300 mb-2 flex items-center gap-1.5">
-                    <User className="w-3.5 h-3.5 text-[#5ed29c]" /> Name
+                    <Mail className="w-3.5 h-3.5 text-[#5ed29c]" /> Name
                   </label>
                   <input
                     type="text"
@@ -146,7 +143,7 @@ export const ContactSection: React.FC = () => {
 
                 <div>
                   <label className="block text-xs uppercase font-mono-accent tracking-wider text-gray-300 mb-2 flex items-center gap-1.5">
-                    <AtSign className="w-3.5 h-3.5 text-[#5ed29c]" /> Email
+                    <Phone className="w-3.5 h-3.5 text-[#5ed29c]" /> Email
                   </label>
                   <input
                     type="email"
@@ -186,7 +183,6 @@ export const ContactSection: React.FC = () => {
 
         </div>
       </motion.div>
-
     </section>
   );
 };

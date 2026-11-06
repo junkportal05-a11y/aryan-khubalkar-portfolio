@@ -13,7 +13,7 @@ const navItems: NavItem[] = [
   { id: 'hero', label: 'Home', icon: Home },
   { id: 'about', label: 'About', icon: User },
   { id: 'projects', label: 'Projects', icon: FolderGit2 },
-  { id: 'experience', label: 'Experience', icon: Briefcase },
+  { id: 'methodology', label: 'Methodology', icon: Briefcase },
   { id: 'skills', label: 'Skills', icon: Target },
   { id: 'certifications', label: 'Certs', icon: Award },
   { id: 'contact', label: 'Contact', icon: Mail },
@@ -25,7 +25,7 @@ export const FloatingDock: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'projects', 'experience', 'skills', 'certifications', 'contact'];
+      const sections = ['hero', 'about', 'projects', 'methodology', 'skills', 'certifications', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -53,12 +53,12 @@ export const FloatingDock: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
       <motion.div
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-        className="flex items-center gap-2 px-4 py-3 rounded-full liquid-glass-card border border-[#5ed29c]/30 shadow-2xl backdrop-blur-xl"
+        className="flex items-center gap-2 px-4 py-2.5 rounded-full liquid-glass-card border border-white/[0.08] shadow-sm backdrop-blur-xl"
       >
         {/* Navigation Items */}
         <div className="flex items-center gap-1">
@@ -74,11 +74,11 @@ export const FloatingDock: React.FC = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => scrollToSection(item.id)}
                 animate={{
-                  scale: isHovered ? 1.25 : 1,
-                  y: isHovered ? -4 : 0,
+                  scale: isHovered ? 1.15 : 1,
+                  y: isHovered ? -3 : 0,
                 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 18 }}
-                className={`relative p-2.5 sm:p-3 rounded-full transition-colors cursor-pointer ${
+                className={`relative p-2 sm:p-3 rounded-full transition-colors cursor-pointer ${
                   isActive
                     ? 'text-[#5ed29c] bg-white/10 shadow-inner'
                     : 'text-gray-400 hover:text-white hover:bg-white/5'
@@ -93,9 +93,9 @@ export const FloatingDock: React.FC = () => {
                 )}
                 {isHovered && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md text-[11px] font-mono-accent font-semibold bg-[#070B0A] text-[#5ed29c] border border-[#5ed29c]/30 whitespace-nowrap shadow-lg pointer-events-none"
+                    className="absolute -top-8 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md text-[10px] font-mono-accent font-semibold bg-[#070B0A] text-[#5ed29c] border border-[#5ed29c]/30 whitespace-nowrap shadow-lg pointer-events-none"
                   >
                     {item.label}
                   </motion.div>
@@ -105,7 +105,7 @@ export const FloatingDock: React.FC = () => {
           })}
         </div>
 
-        <div className="h-5 w-px bg-[#1E2522] mx-1" />
+        <div className="h-4 w-px bg-[#1E2522] mx-1" />
 
         {/* LinkedIn Quick Link */}
         <a
