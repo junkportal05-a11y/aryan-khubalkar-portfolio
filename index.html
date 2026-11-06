@@ -81,7 +81,7 @@
   .nile-progress .dot{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--gold-dim);background:var(--black);margin:7px 0;cursor:pointer;flex:none;transition:all .3s}
   .nile-progress .dot.active{background:var(--gold);border-color:var(--gold-bright)}
   @media(max-width:640px){ .nile-progress{display:none} }
-  section{position:relative;padding:clamp(54px,8vh,84px) clamp(18px,6vw,72px);max-width:1120px;margin:0 auto}
+  section{position:relative;padding:clamp(38px,5.5vh,60px) clamp(18px,6vw,72px);max-width:1120px;margin:0 auto}
   .kicker{display:flex;align-items:center;gap:14px;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:.74rem;font-weight:600;margin-bottom:20px}
   .kicker::before{content:"";width:44px;height:1px;background:var(--gold)}
   .kicker .glyph{font-size:1.25rem;letter-spacing:0;color:var(--gold-bright)}
@@ -254,13 +254,13 @@
      fade and darkens gradually as you scroll, and the JS approach
      fade (applyBlack) dims the photo itself in step, so the river
      melts into black with no hard edge anywhere. The passage is
-     kept short (140vh total): the fade completes, the screen holds
+     kept short (76vh total): the fade completes, the screen holds
      solid black only briefly, then Floor 1 (Proof) arrives. */
-  section.black-passage{max-width:none;margin:0;padding:0;height:104vh;scroll-margin-top:0;position:relative;z-index:3;background:linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,.14) 5vh, rgba(0,0,0,.34) 10vh, rgba(0,0,0,.58) 15vh, rgba(0,0,0,.82) 21vh, rgba(0,0,0,.96) 26vh, #000 28vh, #000 100%)}
+  section.black-passage{max-width:none;margin:0;padding:0;height:76vh;scroll-margin-top:0;position:relative;z-index:3;background:linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,.14) 5vh, rgba(0,0,0,.34) 10vh, rgba(0,0,0,.58) 15vh, rgba(0,0,0,.82) 21vh, rgba(0,0,0,.96) 26vh, #000 28vh, #000 100%)}
   /* ---- Floor gates: the lift-door band at the head of every chamber ---- */
   /* A proper lift doorway, not a banner: tall enough to walk through,
      framed in stone, with the chamber waiting in warm light behind it. */
-  section>.floor-gate.reveal:first-child{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:clamp(148px,21svh,196px);background:radial-gradient(ellipse 64% 86% at 50% 50%, rgba(255,178,84,.14), rgba(140,88,26,.05) 52%, transparent 76%),radial-gradient(ellipse 125% 135% at 50% 50%, rgba(22,16,7,.5), transparent 72%);border:none;outline:none;padding:20px clamp(18px,3vw,28px);margin-bottom:24px;box-shadow:none;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 15%,#000 85%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 15%,#000 85%,transparent 100%)}
+  section>.floor-gate.reveal:first-child{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:clamp(118px,16svh,156px);background:radial-gradient(ellipse 64% 86% at 50% 50%, rgba(255,178,84,.14), rgba(140,88,26,.05) 52%, transparent 76%),radial-gradient(ellipse 125% 135% at 50% 50%, rgba(22,16,7,.5), transparent 72%);border:none;outline:none;padding:20px clamp(18px,3vw,28px);margin-bottom:24px;box-shadow:none;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 15%,#000 85%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 15%,#000 85%,transparent 100%)}
   /* Floor 01 rises straight out of the black passage: its top edge is
      still pure black and melts into the chamber, no hard seam. */
   section#proof{background:linear-gradient(180deg,#000 0, rgba(0,0,0,.6) 130px, transparent 300px)}
@@ -291,7 +291,7 @@
   .fg-arrow{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);color:#141005;display:flex;align-items:center;justify-content:center;font-size:1.05rem;background:radial-gradient(circle at 38% 32%, #ffe9a8, var(--gold) 68%);box-shadow:0 0 26px rgba(255,190,90,.55), inset 0 1px 0 rgba(255,255,255,.5)}
   .fg-num{font-family:"Cinzel",serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.4rem);color:var(--gold-bright);letter-spacing:.1em;white-space:nowrap;text-shadow:0 0 30px rgba(255,178,84,.3)}
   .fg-name{color:var(--sand);letter-spacing:.22em;text-transform:uppercase;font-size:clamp(.78rem,2vw,.92rem);font-weight:600}
-  @media(max-width:560px){ .fg-name{font-size:.68rem;letter-spacing:.14em} section>.floor-gate.reveal:first-child{min-height:148px} }
+  @media(max-width:560px){ .fg-name{font-size:.68rem;letter-spacing:.14em} section>.floor-gate.reveal:first-child{min-height:118px} }
   /* The section content itself steps OUT of the doorway: it starts deep,
      small and blurred just behind the gate, then comes forward into
      full focus once its floor has opened. */
@@ -353,7 +353,7 @@
   .seal-card .meta{color:var(--ink-soft);font-size:.85rem;margin-top:8px !important}
   .seal-card .verified{display:inline-block;margin-top:12px;border:1px solid var(--gold);color:var(--gold-bright);background:rgba(201,162,39,.08);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;font-weight:600}
   @media (prefers-reduced-motion: reduce){
-    section.black-passage{height:104vh}
+    section.black-passage{height:76vh}
     .fg-door{display:none}
     .fg-doors::before,.fg-doors::after{display:none}
     .floor-gate + .reveal{opacity:1;transform:none;filter:none;transition:none}
@@ -517,7 +517,7 @@
   @media(max-width:900px){ .nile-progress{display:none} }
   /* --- Floor 1 (Proof): less empty gate, panels in one language --- */
   section#proof{padding-top:36px}
-  section#proof>.floor-gate.reveal:first-child{min-height:clamp(128px,18svh,168px);margin-bottom:22px}
+  section#proof>.floor-gate.reveal:first-child{min-height:clamp(104px,14svh,136px);margin-bottom:22px}
   section#proof .kicker{margin-bottom:14px}
   section#proof h2.title{margin-bottom:14px}
   .key-study{margin-top:28px;padding:26px clamp(22px,3vw,30px)}
@@ -544,6 +544,25 @@
   .relocated-origin .typewriter-line{margin-top:10px;text-align:left}
   .relocated-origin .tagline-orig{margin-top:12px;text-align:left}
   .relocated-origin .pitch-sub{margin:12px 0 0;max-width:620px;text-align:left}
+  /* ================= CEO REVIEW FIX PASS =================
+     Hero CTAs: every decorative fixed layer (photo stage + dust canvas,
+     darkening / veil layers, interior stage, grain, intro veil) is
+     click-through INCLUDING all descendants, and the hero
+     sits in its own top layer with clicks explicitly on for its CTA
+     row and buttons — nothing can cover or swallow a hero click. */
+  .bg-glow,.photo-stage,.photo-stage *,.inside-stage,.photo-darken,.scene-veil,.grain,#dustCanvas{pointer-events:none !important}
+  .intro{pointer-events:none !important}
+  .hero{z-index:10}
+  .hero-inner3d{pointer-events:none}
+  .hero-cta{position:relative;z-index:30;pointer-events:auto}
+  .hero-cta .btn{position:relative;z-index:31;pointer-events:auto}
+  .btn::after{pointer-events:none}
+  .scroll-cue{pointer-events:none}
+  /* Journey cards: balanced wrapping so no single word orphans */
+  .stop p{text-wrap:pretty}
+  /* Proof: request-the-model link */
+  .model-request{display:inline-block;margin-top:16px;color:var(--gold-bright);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}
+  .model-request:hover{color:var(--gold);border-color:var(--gold-bright)}
 </style>
 </head>
 <body>
@@ -637,6 +656,7 @@
         <div class="big">145%</div>
         <div class="big-label">Projected ROI</div>
         <p class="small">From the model. Full working available on request.</p>
+        <a class="model-request" href="mailto:aryankhubalkar01@gmail.com?subject=Request%3A%20Full%20cost%20%26%20revenue%20model%20%E2%80%94%20Centralized%20Logistics%20Hub&amp;body=Hi%20Aryan%2C%0A%0APlease%20send%20me%20the%20full%20cost%20%26%20revenue%20model%20behind%20the%20145%25%20projected%20ROI%20for%20the%20Centralized%20Logistics%20Hub%20project.%0A%0AThank%20you.">Request Full Cost &amp; Revenue Model &rarr;</a>
       </article>
     </div>
     <div class="hero-value reveal">
@@ -722,7 +742,7 @@
     </div>
     <div class="journey-wrap">
       <article class="stop reveal"><div class="marker"><span>𓆑</span></div><div class="card panel"><p class="when">Stop 01 — The Roots</p><h3>The Fields of Home</h3><p>Farming upbringing: patience, seasons, risk, tangible results. The foundation for everything else.</p></div></article>
-      <article class="stop reveal"><div class="marker"><span>𓂀</span></div><div class="card panel"><p class="when">Stop 02 — Sep 2024</p><h3>The University Gates — Nagpur</h3><p>BBA begins at <b>G H Raisoni Skilltech University</b> — commerce, management and markets, in the city I plan to build in.</p></div></article>
+      <article class="stop reveal"><div class="marker"><span>𓂀</span></div><div class="card panel"><p class="when">Stop 02 — Sep 2024</p><h3>The University Gates — Nagpur</h3><p>BBA begins at <b>G H Raisoni Skilltech University</b> — commerce, management and markets, in the city where I plan to&nbsp;build.</p></div></article>
       <article class="stop reveal"><div class="marker"><span>𓋹</span></div><div class="card panel"><p class="when">Stop 03 — Jan 2025 &amp; Jun 2025</p><h3>The Twin Thrones</h3><p>President, <b>Culture Forum</b> from <b>Jan 2025</b> and <b>Arts &amp; Crafts Club</b> from <b>Jun 2025</b> — teams, budgets, deadlines across <b>25+ events</b>.</p></div></article>
       <article class="stop reveal"><div class="marker"><span>𓅃</span></div><div class="card panel"><p class="when">Stop 04 — The Fests</p><h3>Kashti &amp; PAE — 3,000+ Students</h3><p><b>Kashti and PAE</b> reached <b>3,000+ students</b>. Sponsorships, logistics, crowds — managed end to end.</p></div></article>
       <article class="stop reveal"><div class="marker"><span>𓆣</span></div><div class="card panel"><p class="when">Stop 05 — The Strategy</p><h3>The Logistics Hub &amp; the Tier-2 Study</h3><p>Nagpur logistics hub model — <b>145% ROI</b> — plus a Tier-2 market-entry study. Where the farm boy becomes an analyst.</p></div></article>
@@ -1026,9 +1046,9 @@
   (function(){
     var intro = document.getElementById("intro");
     if (!intro) return;
-    if (reduced) { intro.classList.add("done"); return; }
+    if (reduced) { intro.classList.add("done"); if (intro.parentNode) intro.parentNode.removeChild(intro); return; }
     var lifted = false;
-    function lift(){ if (lifted) return; lifted = true; intro.classList.add("done"); }
+    function lift(){ if (lifted) return; lifted = true; intro.classList.add("done"); setTimeout(function(){ if (intro.parentNode) intro.parentNode.removeChild(intro); }, 1000); }
     window.addEventListener("load", function(){ setTimeout(lift, 650); });
     setTimeout(lift, 2200);
   })();
@@ -1045,20 +1065,29 @@
     if (backTop) backTop.addEventListener("click", function(){ window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" }); });
   })();
   // The nav link for the chamber you are standing in lights up gold.
+  // Scroll-position based (not IntersectionObserver): the active link is
+  // recomputed from scratch on every scroll frame, so it can never go
+  // stale — above Floor 1 (hero / black passage) NO link is active.
   (function(){
-    var links = {};
-    document.querySelectorAll(".navlinks a[href^='#']").forEach(function(a){ links[a.getAttribute("href").slice(1)] = a; });
-    if (!("IntersectionObserver" in window)) return;
-    var navIo = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (!e.isIntersecting) return;
-        Object.keys(links).forEach(function(k){ links[k].classList.toggle("active", k === e.target.id || k === e.target.id + "-content"); });
-      });
-    }, { rootMargin: "-38% 0px -52% 0px" });
-    ["proof","origin","journey","treasures","skills","contact"].forEach(function(id){
+    var ids = ["proof","origin","journey","treasures","skills","contact"];
+    var links = {}, secs = [];
+    ids.forEach(function(id){
       var s = document.getElementById(id);
-      if (s) navIo.observe(s);
+      var a = document.querySelector(".navlinks a[href='#" + id + "-content']");
+      if (s && a) { secs.push(s); links[id] = a; }
     });
+    if (!secs.length) return;
+    var ticking = false;
+    function spy(){
+      ticking = false;
+      var line = window.innerHeight * 0.45;
+      var current = null;
+      secs.forEach(function(s){ if (s.getBoundingClientRect().top <= line) current = s.id; });
+      Object.keys(links).forEach(function(k){ links[k].classList.toggle("active", k === current); });
+    }
+    window.addEventListener("scroll", function(){ if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
+    window.addEventListener("resize", spy);
+    spy();
   })();
   // One tap copies the email address, with plain feedback on the button.
   (function(){
